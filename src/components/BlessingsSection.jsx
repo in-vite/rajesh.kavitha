@@ -8,7 +8,7 @@ export default function BlessingsSection() {
         <h3>Rajesh &amp; Kavitha</h3>
         <p>With best wishes from family and friends</p>
         <p>25 June 2026 · Chennai</p>
-        <p>வாழ்த்துக்களுடன் உங்களை அன்புடன் அழைக்கிறோம்</p>
+        <p>அன்புடன் உங்களை வரவேற்கிறோம்</p>
         <p aria-hidden="true">🪔 🌸 🪔</p>
       </div>
     </section>
