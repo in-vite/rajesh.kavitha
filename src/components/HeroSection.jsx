@@ -1,5 +1,5 @@
 import React from "react";
-import coupleImg from "../assets/couple copy.png";
+import coupleImg from "../assets/couple_copy.png";
 
 export default function HeroSection() {
   return (
