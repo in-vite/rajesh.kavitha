@@ -1,4 +1,5 @@
 import React from "react";
+import ganeshaImg from "../assets/ganesha.png";
 
 export default function SplashScreen({ isOpen, isClosing, onOpenInvitation }) {
   if (isOpen) {
@@ -17,7 +18,7 @@ export default function SplashScreen({ isOpen, isClosing, onOpenInvitation }) {
         <span></span>
       </div>
       <div className="splash-card reveal visible">
-        <img className="splash-ganesha" src="/assets/ganesha.png" alt="Ganesha illustration" />
+        <img className="splash-ganesha" src={ganeshaImg} alt="Ganesha illustration" />
         <p className="eyebrow">திருமண அழைப்பிதழ்</p>
         <h1>
           J. Rajesh <span className="splash-heart">❤️</span> V. Kavitha

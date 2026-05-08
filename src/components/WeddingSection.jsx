@@ -1,4 +1,7 @@
 import React from "react";
+import groomImg from "../assets/groom1.jpeg";
+import brideImg from "../assets/bride1.jpeg";
+import coupleArtImg from "../assets/couple.png";
 
 export default function WeddingSection({
   marriageCountdown,
@@ -69,17 +72,17 @@ export default function WeddingSection({
       <div className="split-panel couple-grid">
         <article className="panel reveal">
           <div className="couple-photo-wrapper">
-            <img src="/assets/groom1.jpeg" alt="J. Rajesh - Groom" className="couple-photo" />
+            <img src={groomImg} alt="J. Rajesh - Groom" className="couple-photo" />
           </div>
           <p className="panel-label">Groom</p>
           <h4>J. Rajesh</h4>
         </article>
         <article className="panel panel-image reveal">
-          <img src="/assets/couple.png" alt="Bride and groom portrait artwork" />
+          <img src={coupleArtImg} alt="Bride and groom portrait artwork" />
         </article>
         <article className="panel reveal">
           <div className="couple-photo-wrapper">
-            <img src="/assets/bride1.jpeg" alt="V. Kavitha - Bride" className="couple-photo" />
+            <img src={brideImg} alt="V. Kavitha - Bride" className="couple-photo" />
           </div>
           <p className="panel-label">Bride</p>
           <h4>V. Kavitha</h4>

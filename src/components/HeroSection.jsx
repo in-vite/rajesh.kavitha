@@ -1,4 +1,5 @@
 import React from "react";
+import coupleImg from "../assets/couple copy.png";
 
 export default function HeroSection() {
   return (
@@ -19,7 +20,7 @@ export default function HeroSection() {
 
         <div className="hero-art reveal">
           <div className="hero-frame">
-            <img src="/assets/couple%20copy.png" alt="Wedding couple artwork" />
+            <img src={coupleImg} alt="Wedding couple artwork" />
           </div>
         </div>
       </div>
