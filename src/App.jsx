@@ -326,9 +326,27 @@ export default function App() {
   }, [isOpen]);
 
   useEffect(() => {
-    const currentVisits = Number(window.localStorage.getItem("wedding-visit-count-react") || "0") + 1;
-    window.localStorage.setItem("wedding-visit-count-react", String(currentVisits));
-    setVisits(String(currentVisits).padStart(3, "0"));
+    // Using a global counter API to track visits across all devices
+    // Namespace is unique to this wedding to avoid collisions
+    const updateVisits = async () => {
+      try {
+        const response = await fetch("https://api.counterapi.dev/v1/sudarshan-wedding-invite-2026/visits/up");
+        if (!response.ok) throw new Error("API response not ok");
+        const data = await response.json();
+        if (data && typeof data.count === "number") {
+          // Format the count with leading zeros, at least 3 digits
+          setVisits(String(data.count).padStart(3, "0"));
+        }
+      } catch (error) {
+        console.error("Failed to update global visit count:", error);
+        // Fallback to local storage logic if the global API is unavailable
+        const localVisits = Number(window.localStorage.getItem("wedding-visit-count-react") || "0") + 1;
+        window.localStorage.setItem("wedding-visit-count-react", String(localVisits));
+        setVisits(String(localVisits).padStart(3, "0"));
+      }
+    };
+
+    updateVisits();
   }, []);
 
   useEffect(() => {

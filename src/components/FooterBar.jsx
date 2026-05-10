@@ -8,8 +8,8 @@ export default function FooterBar({ visits }) {
       <div className="footer-meta">
         <p className="footer-credit">
           Crafted with love by{" "}
-          <a href="https://christinfotech.org/" target="_blank" rel="noopener noreferrer">
-            CHRIST Infotech
+          <a href="https://alansomathew.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+            AM
           </a>
         </p>
         <div className="visitor-widget" aria-label="Visitor count">
